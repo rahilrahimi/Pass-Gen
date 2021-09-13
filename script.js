@@ -5,12 +5,14 @@ const upperCaseChars = "ABCDEFGHIKJLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const chars = '!@#$%^&*(){}[]=<>/,.';
 
-
 function makePassword() {
   var availableChars = ""
   var length = parseInt(
-    prompt("How many caraters would you like your password to contain?")
+    prompt("Choose a password length between 4 to 128")
   )
+  while ( length < 4 || length > 128) {
+    length = parseInt(prompt("choose a password length between 4 to 128"))
+  }
 
   var symbolPrompt = confirm("click 'OK' to confirm including symbol characters")
   if (symbolPrompt){ 
