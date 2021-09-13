@@ -8,10 +8,10 @@ const chars = '!@#$%^&*(){}[]=<>/,.';
 function makePassword() {
   var availableChars = ""
   var length = parseInt(
-    prompt("Choose a password length between 4 to 128")
+    prompt("Choose a password length between 8 to 128")
   )
-  while ( length < 4 || length > 128) {
-    length = parseInt(prompt("choose a password length between 4 to 128"))
+  while ( length < 8 || length > 128) {
+    length = parseInt(prompt("choose a password length between 8 to 128"))
   }
 
   var symbolPrompt = confirm("click 'OK' to confirm including symbol characters")
